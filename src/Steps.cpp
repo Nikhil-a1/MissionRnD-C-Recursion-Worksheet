@@ -21,10 +21,25 @@
 	Note : Test Cases would be small <25.
 
 */
+//time complexity o(logn)
 #include "stdafx.h"
-
-
-int get_steps(int s)
-{
-	return 0;
-}
+int fib(int);
+int get_steps(int N)
+	{
+		int sum = 0;
+		if (N <= 0)
+			return 0;
+		else
+		{
+			sum = fib(N);
+			return sum;
+		}
+	}
+	int fib(int N)
+	{
+		int sum = 0;
+		if (N == 0 || N == 1)
+			return 1;
+		else
+			return sum = sum + fib(N - 2) + fib(N - 1);
+	}
